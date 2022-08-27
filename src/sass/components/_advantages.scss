@@ -27,35 +27,14 @@
 
 .advantages-section__data-container-cow::before {
   content: url(../images/advantages-cow-mobile.png);
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    & {
-      content: url(../images/advantages-cow-mobile@2x.png);
-    }
-  }
 }
 
 .advantages-section__data-container-weight::before {
   content: url(../images/advantages-weight-mobile.png);
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    & {
-      content: url(../images/advantages-weight-mobile@2x.png);
-    }
-  }
 }
 
 .advantages-section__data-container-ice-cream::before {
   content: url(../images/advantages-ice-cream-mobile.png);
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    & {
-      content: url(../images/advantages-ice-cream-mobile@2x.png);
-    }
-  }
 }
 
 .advantages-section__text {
