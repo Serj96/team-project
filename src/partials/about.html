@@ -37,10 +37,75 @@
         <p class="about-section__text about-section__non-mobile-text">
           This is enough to choose ice cream and coffee for any mood!
         </p>
-        <button class="about-section__modal-button" type="button">
+        <button
+          class="about-section__modal-button"
+          type="button"
+          about-modal-open
+        >
           <span class="about-section__modal-button-span">Read more</span>
         </button>
+        <div
+          class="abot-section__modal-backdrop abot-section__modal-backdrop--hidden"
+          about-modal
+        >
+          <div class="abot-section__modal-container">
+            <ul class="abot-section__modal-list">
+                <li class="abot-section__modal-item">
+                    <img
+                        class="about-section__modal-image"
+                        src="./images/about-modal-child.jpeg"
+                        alt="happy child with ice cream"
+                    />
+                    <h3 class="about-section__modal-title">
+                        Lorem ipsum dolor sit amet.
+                    </h3>
+                    <p class="about-section__modal-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis non
+                        odio at officia libero fugit itaque ipsum ducimus adipisci commodi.
+                    </p>
+                </li>
+                
+                <li class="abot-section__modal-item">
+                    <img
+                        class="about-section__modal-image"
+                        src="./images/about-modal-ice-cream.jpeg"
+                        alt="ice cream production"
+                    />
+                    <h3 class="about-section__modal-title">
+                        Lorem ipsum dolor sit amet.
+                    </h3>
+                    <p class="about-section__modal-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis non
+                        odio at officia libero fugit itaque ipsum ducimus adipisci commodi.
+                    </p>
+                </li>
+            
+                <li class="abot-section__modal-item">
+                    <img
+                        class="about-section__modal-image"
+                        src="./images/about-modal-child.jpeg"
+                        alt="happy child with ice cream"
+                    />
+                    <h3 class="about-section__modal-title">
+                        Lorem ipsum dolor sit amet.
+                    </h3>
+                    <p class="about-section__modal-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis non
+                        odio at officia libero fugit itaque ipsum ducimus adipisci commodi.
+                    </p>
+                </li>
+          
+          </ul>
+          <button
+            class="abot-section__modal-close-button abot-section__modal-close-button--selected"
+            about-modal-close
+            type="button"
+          >
+            X
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </section>
+<script src="./about-modal.js"></script>
