@@ -1,4 +1,4 @@
-.section {
+.section__products {
   background-image: url(../images/products/bg1-mob.jpg);
   background-size: contain;
   background-position: center;
@@ -36,7 +36,7 @@
   }
 }
 
-.section__title {
+.section__title--margin {
   margin-top: 12px;
   margin-bottom: 150px;
 
@@ -64,6 +64,9 @@
 }
 
 .products__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   min-height: 420px;
   padding: 120px 40px 20px;
@@ -313,3 +316,69 @@
     font-size: 16px;
   }
 }
+
+.products-btn {
+  background-color: transparent;
+  margin-top: auto;
+  height: 28px;
+  width: 100px;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/products/Arrow.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 40px;
+    transition: transform .3s linear;
+  }
+
+  &:hover::before {
+    transform: translate(150%, -50%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-240%, -50%);
+    background-image: url(../images/products/Arrow.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 40px;
+    transition: transform .3s linear;
+  }
+
+  &:hover::after {
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $hover-color;
+  }
+
+  &:active {
+    background-color: $active-color;
+    border: 1px solid $active-color;
+  }
+}
+
