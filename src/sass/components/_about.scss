@@ -220,6 +220,7 @@
   width: 90vw;
   height: 90vh;
   border: 2px solid $accent-color;
+  overflow-x: hidden;
 }
 
 .abot-section__modal-item {
@@ -272,6 +273,7 @@
 .abot-section__modal-close-button {
   position: absolute;
   background-color: $accent-color;
+  cursor: pointer;
   top: 8px;
   right: 8px;
   display: flex;
