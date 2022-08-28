@@ -44,7 +44,7 @@
     margin-bottom: 200px;
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desk) {
     margin-bottom: 300px;
   }
 }
@@ -82,7 +82,8 @@
 
   @media screen and (min-width: $desk) {
     width: calc((100% - 2 * 30px) / 3);
-    padding: 166px 65px 60px;
+    padding: 166px 65px 48px;
+    min-height: 535px;
   }
 }
 
@@ -128,6 +129,7 @@
       background-image: 
         url(../images/products/ice-cream-mob-tab.jpg);
       background-size: cover;
+      z-index: 2;
 
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -167,6 +169,7 @@
       background-image: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)),
         #D9D9D9;
       box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+      z-index: 2;
 
       @media screen and (min-width: $tablet) {
         top: -12px;
@@ -192,6 +195,7 @@
       background-image:
         url(../images/products/coffee-mob-tab.jpg);
       background-size: cover;
+      z-index: 2;
 
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -231,6 +235,7 @@
       background-image: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)),
         #D9D9D9;
       box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+      z-index: 2;
 
       @media screen and (min-width: $tablet) {
         top: -12px;
@@ -256,6 +261,7 @@
       background-image:
         url(../images/products/milkshake-mob-tab.jpg);
       background-size: cover;
+      z-index: 2;
       
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -295,6 +301,7 @@
       background-image: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)),
         #D9D9D9;
       box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+      z-index: 2;
 
       @media screen and (min-width: $tablet) {
         top: -12px;
@@ -317,6 +324,40 @@
   }
 }
 
+.overlay-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.products__overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 24px;
+  background-color: $accent-color;
+  line-height: 1.76;
+  padding: 110px 20px;
+  z-index: 1;
+
+  transform: translateX(0);
+  transition: transform $transition;
+
+  @media screen and (min-width: $desk) {
+    padding: 200px 65px;
+  }
+}
+
+.products__overlay-text.products__overlay--hidden,
+.products__overlay-text.products__overlay--hidden2,
+.products__overlay-text.products__overlay--hidden3 {
+  transform: translateX(-100%);
+}
+
 .products-btn {
   background-color: transparent;
   margin-top: auto;
@@ -327,6 +368,7 @@
   background-position: center;
   border: none;
   cursor: pointer;
+  z-index: 3;
 
   position: relative;
   overflow: hidden;
