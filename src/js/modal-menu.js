@@ -14,10 +14,7 @@
   });
   })();
 
-    
-
-
-
-  
-
-  
+  $('.menu__mobil-link').click(function () {
+  $('.menu__mobile').removeClass('is-open');
+  $('.menu__btn').removeClass('is-open');
+});
