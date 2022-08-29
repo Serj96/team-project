@@ -304,6 +304,8 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $text-white;
+
+  z-index: 1000;
 }
 
 .abot-section__modal-close-button--selected {

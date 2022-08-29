@@ -197,7 +197,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  transform: translate(20%, 55%) rotate(-25deg);
+  transform: translate(13%, 55%) rotate(-25deg);
   height: 65px;
   width: 65px;
   border-radius: 50%;
@@ -205,7 +205,7 @@
   color: $accent-color;
   background-color: $background-color;
   font-weight: 700;
-  z-index: 1000;
+  z-index: 1;
   &:hover {
     cursor: pointer;
   }

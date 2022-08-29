@@ -18,3 +18,8 @@
   $('.menu__mobile').removeClass('is-open');
   $('.menu__btn').removeClass('is-open');
 });
+
+$('.menu__buy-btn--mobile').click(function () {
+  $('.menu__mobile').removeClass('is-open');
+  $('.menu__btn').removeClass('is-open');
+});
