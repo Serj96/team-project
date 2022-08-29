@@ -214,7 +214,7 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #84A178;
   padding: 120px 0 0 0;
   transition: transform 0.5s ease-in-out;
@@ -431,9 +431,29 @@ ul {
 .hero__list {
   display: flex;
   align-items: baseline;
-  margin-bottom: 200px;
+  margin-bottom: 130px;
 }
 
+.title_span {
+  font-size: 34px;
+}
+
+@media screen and (min-width: 767.99px) {
+  .hero {
+    padding-bottom: 15px;
+    padding-top: 121px;
+  }
+  .hero__list {
+    margin-bottom: 30px;
+  }
+  .hero__title {
+    width: 180px;
+    font-size: 18px;
+  }
+  .title_span {
+    font-size: 24px;
+  }
+}
 @media screen and (min-width: 1199.99px) {
   .hero__title {
     width: 367px;
@@ -445,15 +465,6 @@ ul {
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #FCFCFC;
-  }
-}
-@media screen and (min-width: 767.99px) {
-  .hero {
-    padding-bottom: 15px;
-    padding-top: 121px;
-  }
-  .hero__list {
-    margin-bottom: 30px;
   }
 }
 .hero__inner {
@@ -505,7 +516,7 @@ ul {
   width: 62px;
   height: 24px;
   margin-right: 16px;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 8px;
@@ -607,24 +618,15 @@ ul {
     margin-bottom: 15px;
   }
 }
-.dots__wraper {
-  position: relative;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  z-index: 5;
-}
-
 .ice-cream {
   position: absolute;
-  top: 59%;
-  left: 12%;
-  transform: translate(6px, 7px);
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, 8px);
   -o-object-fit: cover;
      object-fit: cover;
-  width: 230px;
+  width: 210px;
   overflow: hidden;
-  filter: drop-shadow(0px 0px 27px #FFFFFF);
   z-index: 6;
 }
 
@@ -638,7 +640,12 @@ ul {
 
 @media screen and (min-width: 479.99px) {
   .ice-cream {
-    width: 170px;
+    width: 240px;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%, 8px);
   }
 }
 @media screen and (min-width: 767.99px) {
@@ -706,13 +713,13 @@ ul {
   .dots-1 {
     -o-object-fit: cover;
        object-fit: cover;
-    width: 180px;
+    width: 130px;
     z-index: 5;
   }
   .dots-2 {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 180px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 130px;
     z-index: 5;
   }
 }
