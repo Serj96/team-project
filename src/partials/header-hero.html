@@ -50,7 +50,7 @@
             ></use>
           </svg>
         </button>
-        <button class="menu__buy-btn" type="button" data-modal-open>
+        <button class="menu__buy-btn open-button" type="button">
           Buy now
           <svg class="icon__cheveron-right">
             <use href="./images/header_hero/sprite.svg#cheveron-right"></use>
@@ -74,11 +74,21 @@
           <li class="menu__mobil-item">
             <a class="menu__mobil-link" href="#contact">Contact</a>
           </li>
+          <button
+            class="menu__buy-btn menu__buy-btn--mobile open-button2"
+            type="button"
+          >
+            Buy now
+            <svg class="icon__cheveron-right">
+              <use href="./images/header_hero/sprite.svg#cheveron-right"></use>
+            </svg>
+          </button>
         </ul>
       </nav>
     </div>
   </div>
 </header>
+
 <section class="hero">
   <div class="container">
     <div class="hero__inner">
@@ -164,7 +174,7 @@
     </div>
   </div>
 </section>
-<div class="backdrop is-hidden" data-modal>
+<!-- <div class="backdrop is-hidden" data-modal>
   <div class="modal">
     <button class="btn__close" type="button" data-modal-close>
       <svg class="icon-cross" width="11" height="11">
@@ -172,4 +182,110 @@
       </svg>
     </button>
   </div>
-</div>
+</div> -->
+
+<form class="form-oder is-hidden">
+  <h2 class="form-header">your order:</h2>
+
+  <table>
+    <tr class="fist__row">
+      <th>
+        <div class="cell-logo">
+          <img src="./images/logo.svg" alt="Ice Cream Logo" class="logo" />
+        </div>
+      </th>
+
+      <th>
+        <div class="cell-ice">
+          <!-- <img src="./image/ice-cream-mob-tab.png" alt="" /> -->
+        </div>
+      </th>
+      <th>
+        <div class="cell-coffee">
+          <!-- <img src="./image/coffee-mob-tab.png" alt="" /> -->
+        </div>
+      </th>
+      <th>
+        <div class="cell-milkshake">
+          <!-- <img src="./images/milkshake-mob-tab.png" alt="" /> -->
+        </div>
+      </th>
+    </tr>
+    <tr class="row-amount">
+      <th>amount :</th>
+      <td><input type="number" name="amount" id="499" min="0" /></td>
+      <td><input type="number" name="amount" id="799" min="0" /></td>
+      <td><input type="number" name="amount" id="999" min="0" /></td>
+    </tr>
+    <tr class="row-sum">
+      <th>sum :</th>
+      <td><input type="number" name="amount" id="499x" readonly /></td>
+      <td><input type="number" name="amount" id="799x" readonly /></td>
+      <td><input type="number" name="amount" id="999x" readonly /></td>
+    </tr>
+    <tr class="row-total">
+      <th colspan="3">total sum :</th>
+      <td><input type="number" name="amount" id="total" readonly /></td>
+    </tr>
+  </table>
+  <textarea
+    class="oder_delivery"
+    name="oder_delivery"
+    rows="5"
+    placeholder="enter place of delivery.."
+  ></textarea>
+  <button class="oder__button">
+    <img src="./images/ice-truck.png" alt="Ice cream truck" />
+  </button>
+</form>
+
+<script>
+  const q499 = document.getElementById('499');
+  const q799 = document.getElementById('799');
+  const q999 = document.getElementById('999');
+
+  const s499 = document.getElementById('499x');
+  const s799 = document.getElementById('799x');
+  const s999 = document.getElementById('999x');
+
+  const total = document.getElementById('total');
+
+  q499.addEventListener('input', () => {
+    console.log('amount = ', q499.value);
+    console.log('sum = ', 4.99 * q499.value);
+    s499.value = (4.99 * q499.value).toFixed(2);
+    total.value = Number(s499.value) + Number(s799.value) + Number(s999.value);
+  });
+  q799.addEventListener('input', () => {
+    console.log('amount = ', q799.value);
+    console.log('sum = ', 7.99 * q799.value);
+    s799.value = (7.99 * q799.value).toFixed(2);
+    total.value = Number(s499.value) + Number(s799.value) + Number(s999.value);
+  });
+  q999.addEventListener('input', () => {
+    console.log('amount = ', q999.value);
+    console.log('sum = ', 9.99 * q999.value);
+    s999.value = (9.99 * q999.value).toFixed(2);
+    total.value = Number(s499.value) + Number(s799.value) + Number(s999.value);
+  });
+</script>
+
+<script>
+  document.querySelector('.oder__button').addEventListener('click', () => {
+    document.querySelector('.form-oder').className = 'form-oder is-hidden';
+  });
+
+  document.querySelector('.open-button').addEventListener('click', () => {
+    document.querySelector('.form-oder').className = 'form-oder';
+  });
+</script>
+
+<script>
+  document.querySelector('.oder__button').addEventListener('click', () => {
+    document.querySelector('.form-oder').className = 'form-oder is-hidden';
+  });
+
+  document.querySelector('.open-button2').addEventListener('click', () => {
+    document.querySelector('.form-oder').className = 'form-oder';
+  });
+</script>
