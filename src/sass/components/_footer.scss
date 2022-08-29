@@ -105,18 +105,18 @@
   flex-direction: row-reverse;
   column-gap: 28px;
 }
-.footer-networks__item {
-  list-style: none;
-  &:hover,
-  &:focus {
+
+.footer-networks__link {
+  &:hover .footer-networks__icon,
+  &:focus .footer-networks__icon{
     transform: scale(1.1);
+    fill: #fff;
   }
 }
 
 .footer-networks__icon {
   border-radius: 50%;
-  background-color: yellow;
-  fill: white;
+  fill: $background-color;
 }
 .footer-adress {
   font-weight: 700;
