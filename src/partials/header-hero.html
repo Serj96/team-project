@@ -1,0 +1,134 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="logo">
+        <a class="logo__link" href="#">
+          <img
+            class="logo__ice-creame"
+            src="./images/header_hero/ice-cream.png"
+            alt="Ice-cream"
+          />
+          <span class="logo__text">ce</span>
+        </a>
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link current" href="#">Home</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" id="about">About us</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" id="howitsmade">How it’s made?</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" id="products">Our products</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" id="contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu__btn-list">
+        <button
+          class="menu__btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg class="menu__icon" aria-label="mobile menu switch">
+            <use
+              class="icon__burger"
+              href="./images/header_hero/sprite.svg#menu-burger"
+            ></use>
+            <use
+              class="icon__cross"
+              href="./images/header_hero/sprite.svg#icon-close-menu-icon"
+            ></use>
+          </svg>
+        </button>
+        <button class="menu__buy-btn" type="button" data-modal-open>
+          Buy now
+          <svg class="icon__cheveron-right">
+            <use href="./images/header_hero/sprite.svg#cheveron-right"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="menu__mobile" id="menu-container" data-menu>
+        <ul class="menu__mobil-list">
+          <li class="menu__mobil-item">
+            <a class="menu__mobil-link current" href="#">Home</a>
+          </li>
+          <li class="menu__mobil-item">
+            <a class="menu__mobil-link" href="#" id="about">About us</a>
+          </li>
+          <li class="menu__mobil-item">
+            <a class="menu__mobil-link" href="#" id="howitsmade"
+              >How it’s made?</a
+            >
+          </li>
+          <li class="menu__mobil-item">
+            <a class="menu__mobil-link" href="#" id="products">Our products</a>
+          </li>
+          <li class="menu__mobil-item">
+            <a class="menu__mobil-link" href="#" id="contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__title">ice cream made with passion</h1>
+    <div class="hero__list">
+      <a href="#" class="hero__link-prod">Products</a>
+      <a href="#" class="hero__link-made">How it’s made?</a>
+    </div>
+    <div class="plate">
+      <img
+        class="plate__img"
+        src="./images/header_hero/plate.png"
+        alt="plate"
+      />
+      <div>
+        <p class="plate__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <span class="line"></span>
+        <svg class="icon__arrow" width="40" height="14">
+          <use href="./images/header_hero/sprite.svg#Arrow"></use>
+        </svg>
+      </div>
+    </div>
+    <img
+      class="ice-cream"
+      src="./images/header_hero/big-ice_cream.png"
+      alt="big ice-cream"
+    />
+    <img
+      class="ice-cream__tablet"
+      src="./images/header_hero/ice-cream__tablet.png"
+      alt="#"
+    />
+    <div class="dots__wraper">
+      <img class="dots-3" src="./images/header_hero/dots_3.png" alt="dots" />
+      <img class="dots-2" src="./images/header_hero/dots_2.png" alt="dots" />
+      <img class="dots-1" src="./images/header_hero/dots_1.png" alt="dots" />
+    </div>
+  </div>
+</section>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="btn__close" type="button" data-modal-close>
+      <svg class="icon-cross" width="11" height="11">
+        <use href="./images/header_hero/sprite.svg#icon-close-menu-icon"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+<script src="./js/modal-menu.js"></script>
+<script src="./js/modai.js"></script>
