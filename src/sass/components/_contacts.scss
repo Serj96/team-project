@@ -6,10 +6,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: -300px;
     
     @media screen and (min-width:$tablet){
         gap: 16px;
+        margin-top: 96px;
     }
     @media screen and (min-width:$desk) {
         gap: 32px;
@@ -23,11 +23,18 @@
         background: #FCFCFC;
         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
         border-radius: 24px;
+        @media screen and (max-width:$tablet) {
+            &:first-child {
+                margin-top: -300px;
+            }
+        }
         @media screen and (min-width:$tablet) {
+            margin-top: -304px;
             width: 224px;
             min-height: 528px;
         }
         @media screen and (min-width:$desk) {
+            margin-top: -96px;
             width: 368px;
             min-height: 538px;
         }
