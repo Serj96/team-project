@@ -6,6 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: -300px;
     
     @media screen and (min-width:$tablet){
         gap: 16px;
@@ -110,22 +111,15 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding-left: 80px;
-    padding-right: 80px;
     margin-top: 32px;
     align-content: center;
     margin-top: 32px;
     @media screen and (min-width:$tablet) {
-        display: inline-flex;
         flex-flow: nowrap;
         margin-top: 60px;
-        padding-left: 200px;
-        padding-right: 200px;
+        justify-content: center;
     @media screen and (min-width:$desk) {
-        display: inline-flex;
         margin-top: 64px;
-        padding-left: 416px;
-        padding-right: 416px;
     }
     }
     &__first {
@@ -135,6 +129,7 @@
         font-family: 'montserrat', sans-serif;
         font-weight: 500;
         font-size: 16px;
+        min-width: 161px;
         line-height: 1.29;
         color: #000;
         background-color: #F8D24E;
@@ -149,60 +144,72 @@
             font-size: 14px;
             line-height: 1.29;
         }
+    
+    }
+    &__first:hover, &__first:focus {
+        border: 2px solid #0A8817;;
+        background-color: #0A8817
+        
+    }
+    &__first:active {
+        border: 2px solid #ABABAB;
+        background-color: #ABABAB;
+        
     }
     
     &__second {
         @extend %button;
         margin-top: 8px;
-        width: 161px;
         font-size: 16px;
+        min-width: 161px;
         font-weight: 700;
         color: white;
         @media screen and (min-width:$tablet) {
             margin-left: 16px;
             margin-top: 0;
-            width: 158px;
+            min-width: 158px;
             height: 42px;
             font-weight: 600;
             font-size: 14px;
             line-height: 1.29;
         }
-    
+       
     }
-    &__second::after{
-        content: "";
-        fill: white;
+    &__second:hover, &__second:focus {
+        border: 2px solid #0A8817;
     }
-}
+    &__second:active {
+        border: 2px solid #ABABAB;
+        
+    }
 
-.card-title {
+}
+.contacts-arrow {
     display: flex;
-    height: 16px;
-    width: 80px;
+}
+.contacts__arrow::after {
+    content: url(../images/contacts-arrow.svg);
+    margin-left: 15px;
+}
+.contacts__arrow--black::after {
+    content: url(../images/contacts-arrow-black.svg);
+    margin-left: 15px;
+    fill: black;
+}
+.card-title {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
     background: #F8D24E;
     border-radius: 4px;
     align-items: center;
     text-align: center;
     &__cafe {
-        margin: 0 auto;
         text-transform: uppercase;
         color: #FCFCFC;
-    }
-
-}
-.card-title-foodtruck {
-    display: flex;
-    height: 16px;
-    width: 130px;
-    background: #F8D24E;
-    border-radius: 4px;
-    align-items: center;
-    text-align: center;
-    
-    &__center {
-        text-transform: uppercase;
-        margin: 0 auto;
-        color: #FCFCFC;
+        @media screen and (min-width:$tablet) {
+            color: black;
+        }
     }
 }
 
