@@ -95,7 +95,7 @@
       <h1 class="hero__title">
         ice cream made with <span class="title_span">passion</span>
       </h1>
-      <div class="hero__group">
+      <div class="group">
         <div class="group__inner">
           <p class="num">16</p>
           <p class="word">cafes</p>
@@ -111,18 +111,35 @@
       <a href="#" class="hero__link-made">How it’s made?</a>
     </div>
     <div class="plate">
-      <img
-        loading="lazy"
-        class="plate__img"
-        src="./images/header_hero/plate.png"
-        alt="plate"
-      />
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/header_hero/plate_lg.png    1x,
+            ./images/header_hero/plate_lg@2x.png 2x
+          "
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/header_hero/plate_md.png    1x,
+            ./images/header_hero/plate_md@2x.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          loading="lazy"
+          class="plate__img"
+          src="./images/header_hero/plate.png"
+          alt="plate"
+        />
+      </picture>
       <div>
         <p class="plate__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
         </p>
-        <span class="line"></span>
         <svg class="icon__arrow" width="40" height="14">
           <use href="./images/header_hero/sprite.svg#Arrow"></use>
         </svg>
