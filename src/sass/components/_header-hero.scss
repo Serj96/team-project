@@ -892,14 +892,14 @@ input {
     min-height: 320px;
     width: calc(100% * 0.8);
     background-color: $accent-color;
-    width: 320px;
+    width: 318px;
     border-radius: 24px;
     z-index: 100;
     border: 2px solid $hover-color;
 
     @media screen and (max-width: $tablet) {
         position: fixed;
-        top: 40%;
+        top: 50%;
         left: 50%;
         max-width: 380px;
         transform: translate(-50%, -50%);
@@ -924,14 +924,15 @@ input {
 
 .form-header {
     font-weight: 400;   
-    font-size: 34px;
+    font-size: 28px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #ffffff;
     padding-left: 24px;
-    // margin-bottom: 30px;
+    margin-bottom: 20px;
 
     @media screen and (min-width: $tablet) {
+        font-size: 34px;
         margin-bottom: 20px;
     }
 }
@@ -1135,6 +1136,35 @@ input {
     display: none;
 }
 
+.oder-form__buton--close {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid $hover-color;
+    overflow: hidden;
+    // background-color: $background-color;
+    object-fit: cover;
+    position: absolute;
+    top: -10px;
+    right: 0px;
 
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 6px 7px rgba(191, 9, 9, 0.76);
+    }
+
+    &:active img {
+        transform: scale(0.75);
+    }
+
+    @media screen and (min-width: $tablet) {
+        top: -10px;
+        right: -10px;
+    }
+}
+
+.oder-form__buton--close img {
+    fill: $accent-color;
+}
 
 
