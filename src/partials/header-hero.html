@@ -95,7 +95,7 @@
       <h1 class="hero__title">
         ice cream made with <span class="title_span">passion</span>
       </h1>
-      <div class="hero__group">
+      <div class="group">
         <div class="group__inner">
           <p class="num">16</p>
           <p class="word">cafes</p>
@@ -107,22 +107,39 @@
       </div>
     </div>
     <div class="hero__list">
-      <a href="#" class="hero__link-prod">Products</a>
-      <a href="#" class="hero__link-made">How it’s made?</a>
+      <a href="#products" class="hero__link-prod">Products</a>
+      <a href="#howitsmade" class="hero__link-made">How it’s made?</a>
     </div>
     <div class="plate">
-      <img
-        loading="lazy"
-        class="plate__img"
-        src="./images/header_hero/plate.png"
-        alt="plate"
-      />
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/header_hero/plate_lg.png    1x,
+            ./images/header_hero/plate_lg@2x.png 2x
+          "
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/header_hero/plate_md.png    1x,
+            ./images/header_hero/plate_md@2x.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          loading="lazy"
+          class="plate__img"
+          src="./images/header_hero/plate.png"
+          alt="plate with ice-cream"
+        />
+      </picture>
       <div>
         <p class="plate__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
         </p>
-        <span class="line"></span>
         <svg class="icon__arrow" width="40" height="14">
           <use href="./images/header_hero/sprite.svg#Arrow"></use>
         </svg>
@@ -138,38 +155,38 @@
       loading="lazy"
       class="ice-cream__tablet"
       src="./images/header_hero/tablet_ice-cream.png"
-      alt="#"
+      alt="ice-cream"
     />
     <img
       loading="lazy"
       class="ice-cream__desk"
       src="./images/header_hero/desk_ice-cream.png"
-      alt="#"
+      alt="ice-cream"
     />
     <div class="dots__wraper">
       <img
         class="dots-4"
         loading="lazy"
         src="./images/header_hero/dots.png"
-        alt="dots"
+        alt="wave of dots"
       />
       <img
         class="dots-3"
         loading="lazy"
         src="./images/header_hero/dots_3.png"
-        alt="dots"
+        alt="part of a wave of dots"
       />
       <img
         class="dots-2"
         loading="lazy"
         src="./images/header_hero/dots_2.png"
-        alt="dots"
+        alt="part of a wave of dots"
       />
       <img
         class="dots-1"
         loading="lazy"
         src="./images/header_hero/dots_1.png"
-        alt="dots"
+        alt="part of a wave of dots"
       />
     </div>
   </div>
