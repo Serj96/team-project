@@ -117,6 +117,10 @@
 .footer-networks__icon {
   border-radius: 50%;
   fill: $background-color;
+
+    @media screen and (max-width: $tablet) {
+      fill: $text-white;
+    }
 }
 .footer-adress {
   font-weight: 700;
