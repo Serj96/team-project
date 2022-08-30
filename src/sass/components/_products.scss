@@ -129,6 +129,7 @@
       background-image: 
         url(../images/products/ice-cream-mob-tab.jpg);
       background-size: cover;
+      background-repeat:no-repeat;
       z-index: 2;
 
       @media (min-device-pixel-ratio: 2),
@@ -195,6 +196,7 @@
       background-image:
         url(../images/products/coffee-mob-tab.jpg);
       background-size: cover;
+      background-repeat:no-repeat;
       z-index: 2;
 
       @media (min-device-pixel-ratio: 2),
@@ -261,6 +263,7 @@
       background-image:
         url(../images/products/milkshake-mob-tab.jpg);
       background-size: cover;
+      background-repeat:no-repeat;
       z-index: 2;
       
       @media (min-device-pixel-ratio: 2),

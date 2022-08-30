@@ -131,6 +131,8 @@
         line-height: 1;
         color: $text-white; 
         transition: 250ms ease;
+        width: 100%;
+        display: block;
         
         &:hover,
         &:focus {
@@ -152,6 +154,7 @@
 
     & .menu__mobil-item {
         padding: 15px 0;
+        text-align: center;
     }
 
     & .current  {
