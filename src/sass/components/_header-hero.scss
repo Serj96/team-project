@@ -1099,6 +1099,7 @@ input {
     margin-right: auto;
     margin-left: auto;
     margin-top: 10px;
+    resize: none;
 
     @media screen and (min-width: $tablet) {
         height: 65px;
