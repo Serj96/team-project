@@ -20,7 +20,7 @@
           "
           src="./images/about-cow-mobile.png"
           alt="cow"
-          sizes="(min-width:768) 50vw, 100vw"
+          sizes="(min-width: 768px) 50vw, 100vw"
         />
       </div>
       <div class="about-section__text-button-container">
@@ -41,13 +41,13 @@
         <button
           class="about-section__modal-button"
           type="button"
-          about-modal-open
+          data-about-open
         >
           <span class="about-section__modal-button-span">Read more</span>
         </button>
         <div
           class="abot-section__modal-backdrop abot-section__modal-backdrop--hidden"
-          about-modal
+          data-about-modal
         >
           <div class="abot-section__modal-container">
             <ul class="abot-section__modal-list">
@@ -117,7 +117,7 @@
           </ul>
           <button
             class="abot-section__modal-close-button abot-section__modal-close-button--selected"
-            about-modal-close
+            data-about-close
             type="button"
           >
             X
